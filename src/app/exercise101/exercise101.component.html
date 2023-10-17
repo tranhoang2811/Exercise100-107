@@ -1,0 +1,44 @@
+<h3 class="text-center text-white bg-dark p-3">Fake Product Data</h3>
+<div class="contaner">
+    <table class="table table -hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of fakeProducts">
+                <td>
+                    {{product.id}}
+                </td>
+                <td>
+                    {{product.title}}
+                </td>
+                <td>
+                    {{product.price}}
+                </td>
+                <td>
+                    {{product.description}}
+                </td>
+                <td>
+                    {{product.category}}
+                </td>
+                <td>
+                    <img [src]="product.image" width="40px">
+                </td>
+                <td>
+                    {{product.rating.rate}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        {{errorMessage}}
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<h3 class="text-center text-white bg-dark p-3">Dong A Bank</h3>
+<div class="contaner">
+    <table class="table table -hover">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>ImageUrl</th>
+                <th>MuaTienMat</th>
+                <th>MuaCK</th>
+                <th>BanTienMat</th>
+                <th>BanCK</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of dongABankItems">
+                <td>
+                    {{item.type}}
+                </td>
+                <td>
+                    <img [src]="item.imageurl" />
+                </td>
+                <td>
+                    {{item.muatienmat}}
+                </td>
+                <td>
+                    {{item.muack}}
+                </td>
+                <td>
+                    {{item.bantienmat}}
+                </td>
+                <td>
+                    {{item.banck}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        {{errorMessage}}
+    </div>
+</div>

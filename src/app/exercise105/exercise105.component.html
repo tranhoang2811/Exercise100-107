@@ -1,0 +1,22 @@
+<div class="container">
+    <table>
+        <tr>
+            <td>Count:</td>
+            <td>{{genderPrediction?.count ?? 'N/A'}}</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" (input)="onNameChange($event)">
+            </td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>{{genderPrediction?.gender ?? 'N/A'}}</td>
+        </tr>
+        <tr>
+            <td>Probability:</td>
+            <td>{{genderPrediction?.probability ?? 'N/A'}}</td>
+        </tr>
+    </table>
+</div>

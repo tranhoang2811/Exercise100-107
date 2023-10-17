@@ -1,0 +1,37 @@
+[
+  {
+    "context": ["/exchange/export"],
+    "target": "https://www.dongabank.com.vn",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  {
+    "context": ["/products"],
+    "target": "https://fakestoreapi.com",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  {
+    "context": ["/v1/bpi/currentprice.json"],
+    "target": "https://api.coindesk.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  {
+    "context": ["/entries"],
+    "target": "https://api.publicapis.org",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  {
+    "context": ["/?name="],
+    "target": "https://api.genderize.io",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+]
