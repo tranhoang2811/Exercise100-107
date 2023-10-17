@@ -33,5 +33,19 @@
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
+  },
+  {
+    "context": ["/api/data"],
+    "target": "https://datausa.io",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }, 
+  {
+    "context": ["/api/breeds/image/random"],
+    "target": "https://dog.ceo",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
   }
 ]
