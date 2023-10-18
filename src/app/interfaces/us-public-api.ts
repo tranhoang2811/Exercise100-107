@@ -1,7 +1,12 @@
 export interface IUsNation {
-  'ID State': string;
-  State: string;
+  'ID Nation': string;
+  Nation: string;
   'ID Year': string;
+  Year: string;
   Population: number;
-  'Slug State': string;
+  'Slug Nation': string;
+}
+
+export interface IUsNationData {
+  data: IUsNation[];
 }

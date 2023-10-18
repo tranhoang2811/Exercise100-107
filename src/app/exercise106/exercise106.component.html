@@ -1,45 +1,35 @@
-<!-- <h3 class="text-center text-white bg-dark p-3">Public API</h3>
-<div class="input-group">
-    <input type="text">
-    <input type="text">
-</div>
+<h3 class="text-center text-white bg-dark p-3">US Public API</h3>
 <div class="contaner">
     <table class="table table -hover">
         <thead>
             <tr>
-                <th>API</th>
-                <th>Description</th>
-                <th>Auth</th>
-                <th>HTTPS</th>
-                <th>Cors</th>
-                <th>Link</th>
-                <th>Category</th>
+                <th>ID Nation</th>
+                <th>Nation</th>
+                <th>ID Year</th>
+                <th>Year</th>
+                <th>Population</th>
+                <th>Slug State</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of publicApis">
+            <tr *ngFor="let item of usNations">
                 <td>
-                    {{item.API}}
+                    {{item['ID Nation']}}
                 </td>
                 <td>
-                    {{item.Description}}
+                    {{item.Nation}}
                 </td>
                 <td>
-                    {{item.Auth || 'No Auth'}}
+                    {{item['ID Year']}}
                 </td>
                 <td>
-                    {{item.HTTPS}}
+                    {{item.Year}}
                 </td>
                 <td>
-                    {{item.Cors}}
+                    {{item.Population}}
                 </td>
                 <td>
-                    <a href="{{item.Link}}">
-                        Link
-                    </a>
-                </td>
-                <td>
-                    {{item.Category}}
+                    {{item['Slug Nation']}}
                 </td>
             </tr>
         </tbody>
@@ -47,4 +37,4 @@
     <div>
         {{errorMessage}}
     </div>
-</div> -->
+</div>

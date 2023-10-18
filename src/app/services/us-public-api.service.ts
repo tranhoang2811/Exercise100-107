@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { catchError, Observable, retry } from 'rxjs';
+import { IUsNationData } from '../interfaces/us-public-api';
 import { ErrorService } from './error.service';
 
 @Injectable({
@@ -11,7 +13,9 @@ export class UsPublicApiService {
     private errorService: ErrorService
   ) {}
 
-  public getUsPublicApiData() {
-    return this.httpClient.get('/api/data');
+  public getUsPublicApiData(): Observable<IUsNationData> {
+    return this.httpClient
+      .get<IUsNationData>('/api/data?drilldowns=Nation&measures=Population')
+      .pipe(retry(3), catchError(this.errorService.handleError));
   }
 }
